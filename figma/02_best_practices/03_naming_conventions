@@ -1,4 +1,7 @@
 # Naming Conventions
 
-- Use title case with spaces in between words. This is the most readable and works well with other parts of the software where title case would be appropriate e.g. defining styles etc.
+- **Components:** Pascal case
+- **Styles etc.:** Title case with spaces in between.<br>
+- `Btn`: Button
+- `Bg`: Background
 - `* Wrapper`: Use 'wrapper' sparingly. This is used to indicate a container within which another/other container/s is/are directly placed but layout settings are made e.g. padding etc. within the first container.
