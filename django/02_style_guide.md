@@ -14,3 +14,7 @@
   (Good) A form for a product variant.
 
   (Bad) A form for product variant objects.
+
+## Data Fixtures
+
+<!-- Directory structure -->
