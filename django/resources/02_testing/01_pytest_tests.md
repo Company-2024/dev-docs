@@ -1,5 +1,9 @@
 # Django Project Testing
 
+<!--
+- Store providers in Python file for speed.
+-->
+
 "Code without tests is broken as designed." &mdash; Jacob Kaplan-Moss
 
 Use a collection of tests – a test suite – to solve, or avoid, a number of
@@ -70,6 +74,10 @@ is to provide a default way of getting a new instance, while still being able to
 override some fields on a per-call basis.
 
 This is adopted over Model Bakery.
+
+<!--
+- Strong relationship between faker and factory-boy.
+-->
 
 ### Faker
 
