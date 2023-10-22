@@ -1,5 +1,11 @@
 # Django Best Practices
 
+## Workflow
+
+<!--
+- When modifying models with fields that can't be None, first do with a default value then remove the default it.
+-->
+
 ## Models
 
 <!--
