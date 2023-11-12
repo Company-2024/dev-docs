@@ -1,19 +1,49 @@
-# Django Best Practices
+# Django Style Guide and Best Practices
 
-## Workflow
+## Testing
+
+See [documentation on Testing](testing-intro).
+
+<!-- ## Semantics -->
+
+<!--
+- Not necessarily. Just ensure that you are referring to a class/model/object when you use the code name and are not using it as a noun otherwise it doesn't make sense and you will run into inconsistencies when things don't really fit.
+- When referring to a class corresponding to a model, always follow the
+  reference with 'object(s)' or model to be clear as the class name is neither natural
+  language nor does it, necessarily, refer to the actual corresponding noun.
+  Similarly, do not use the natural language name to refer to a class e.g.:
+
+  (Good) A form for `ProductVariant` objects.
+
+  (Bad) A form for a `ProductVariant`.
+
+  (Good) A form for a product variant.
+
+  (Bad) A form for product variant objects. -->
+
+<!-- ## Data Fixtures -->
+
+<!-- Directory structure -->
+
+<!-- ## Workflow -->
 
 <!--
 - When modifying models with fields that can't be None, first do with a default value then remove the default it.
 -->
 
-## Models
+<!-- ## Models -->
 
 <!--
 - You don't need and should not alter default pk field if you don't want to use it as part of the url. Leave pk as it is, don't change it. Make a new uuid field or slug field or whatever unique identifier you prefer, and use it as part of the url.
 - Each model must have a get_pk_related_field_data method which is used to create a representation of an object in a serializer relationship.
+- Use get_object_or_404
 -->
 
-## Validation
+<!-- ## Validation -->
+
+<!--
+- In docstrings act as though everything has been created otherwise you will crack your head trying to figure out how to say this thing has not been created yet.
+-->
 
 <!--
 - https://legacy.reactjs.org/blog/2016/07/13/mixins-considered-harmful.html
