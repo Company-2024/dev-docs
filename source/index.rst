@@ -3,14 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-CompanyX Developer Documentation
-================================
+Developer Documentation
+=======================
 
 .. toctree::
    :maxdepth: 1
 
    python/index.rst
-   ai/index.rst
+   ai_ml/index.rst
+   dev_ops/index.rst
+   setup_guides/index.rst
 
 
 
