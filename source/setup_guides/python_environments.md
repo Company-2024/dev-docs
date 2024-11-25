@@ -1,0 +1,142 @@
+# Python Environments
+
+The following is a guide for setting up your Python development environment.
+
+## Virtual Environment
+
+To create a virtual environment, run the command
+
+```
+python -m venv <virtual_environment_dir_name>
+```
+
+For the virtual environment directory name, use one of the following:
+
+- `.venv` (recommended)
+- `.env`
+- `venv`
+- `env`
+
+These are the standards that will be included in ignore files such as
+`.gitignore`.
+
+Activate your virtual environment and install Python packages. If available If
+available, you can also install packages from a `requirements.txt` file, using:
+
+```
+pip install -r <path_to_requirements.txt_file>
+```
+
+## Conda Environment
+
+After downloading Miniconda (see
+[Miniconda installation documentation](https://docs.anaconda.com/miniconda/install/))
+or Anaconda (see [Anaconda download page](https://www.anaconda.com/download)),
+launch the Miniconda or Anaconda prompt and if following the standard process,
+do the steps below to setup your environment.
+
+```{note}
+
+Follow the steps in the given order as some steps depend on previous ones and
+some conflicts may arise if order of steps is not observed.
+```
+
+### Setting Up Conda Environment from Scratch
+
+1. Create an Conda environment using:
+
+   ```
+
+   conda create -n <environment-name> [python=x.x] [space-separated-packages]
+
+   ```
+
+   The environment name should be kebab case.
+
+2. Activate your new environment using:
+
+   ```
+   conda activate <environment-name>
+   ```
+
+3. If using Miniconda, install conda-build using:
+
+   ```
+
+   conda install conda-build
+
+   ```
+
+   This allows you to use such command as `conda develop` which adds paths to
+   the Python path.
+
+4. Add any directories in which you want the Python interpreter to search for
+   local packages using
+
+   ```
+   conda develop <path_to_local_package_dir>
+   ```
+
+5. If using Miniconda, install pip using;
+
+   ```
+
+   conda install pip
+
+   ```
+
+6. If required, install CUDA and cuDNN using:
+
+   ```
+
+   conda install cuda=xx.x cudnn=x.xx -c nvidia
+
+   ```
+
+   ```{note}
+
+   Ensure that the versions you are installing are compatible with:
+   1. The specific version of the deep learning framework you would like to use
+   2. The specific version of any SDK you might intend to use e.g. TensorRT
+      (which in turn depends on the GPU architecture you are using)
+   ```
+
+7. Install Python packages **using pip where possible**. If available, you can
+   also install packages from a `requirements.txt` file, using:
+
+   ```
+   pip install -r <path_to_requirements.txt_file>
+   ```
+
+   We use pip instead of Conda albeit installing into Conda environments
+   because:
+
+   - it offers the most up-to-date packages
+   - there are several cases where Python packages are available via pip but not
+     Conda
+   - when you have to use pip for the aforementioned reasons, mixing pip
+     packages with Conda packages can result in conflicts and other strange
+     things
+   - packages can easily be installed via `requirements.txt` files
+   - it makes the environment somewhat reproducible in a virtual environment
+
+8. If you intend to use Jupyter
+
+   1. Install `ipykernel` using:
+
+      ```
+      pip install ipykernel
+      ```
+
+   2. Create a new kernel using:
+
+      ```
+      ipython kernel install --user --name=<any-name-for-kernel>
+      ```
+
+   The kernel name should be kebab case.
+
+<!--
+TODO:
+- Discussion of conda channels?
+-->

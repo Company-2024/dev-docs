@@ -7,14 +7,22 @@ Developer Documentation
 =======================
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   python/index.rst
-   ai_ml/index.rst
-   dev_ops/index.rst
-   setup_guides/index.rst
+    tech_stacks/index.rst
+    setup_guides/index.rst
+   
 
+Specific Topics
+===============
 
+.. toctree::
+    :maxdepth: 1
+    
+    python/index.rst
+    ai_ml/index.rst
+    dev_ops/index.rst
+   
 
 Indices and tables
 ==================
