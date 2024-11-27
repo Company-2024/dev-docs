@@ -1,5 +1,11 @@
 ## Docstrings
 
+### Docstring Style
+
+Use Google style docstrings as these are easier to read than reStructuredText or
+the Numpy style. An example can be found
+[here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+
 ### Return Value(s)
 
 Document a single return value as follows (note the indentation levels):

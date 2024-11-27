@@ -2,6 +2,9 @@
 
 The following is a guide for setting up your Python development environment.
 
+You may need to refer to the [Tech Stacks](#) pages if unfamiliar with the
+platforms discussed or for clarity on why they are our standards.
+
 ## Virtual Environment
 
 To create a virtual environment, run the command
@@ -20,20 +23,27 @@ For the virtual environment directory name, use one of the following:
 These are the standards that will be included in ignore files such as
 `.gitignore`.
 
-Activate your virtual environment and install Python packages. If available If
-available, you can also install packages from a `requirements.txt` file, using:
+Activate your virtual environment and install Python packages.
+
+If available for a particular project, you can install packages from a
+`requirements.txt` file, using:
 
 ```
 pip install -r <path_to_requirements.txt_file>
 ```
 
+Note down each new package you install and its version (excluding its
+dependencies) in a new or existing `requirements.txt` file.
+
 ## Conda Environment
 
-After downloading Miniconda (see
+After downloading Miniconda (recommended) (see
 [Miniconda installation documentation](https://docs.anaconda.com/miniconda/install/))
 or Anaconda (see [Anaconda download page](https://www.anaconda.com/download)),
-launch the Miniconda or Anaconda prompt and if following the standard process,
-do the steps below to setup your environment.
+launch the Miniconda or Anaconda prompt.
+
+Follow steps below to configure a new environment from scratch or configure an
+environment from environment files.
 
 ```{note}
 

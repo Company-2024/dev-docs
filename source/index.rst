@@ -11,6 +11,7 @@ Developer Documentation
 
     tech_stacks/index.rst
     setup_guides/index.rst
+    standards/index.rst
    
 
 Specific Topics

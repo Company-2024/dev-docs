@@ -1,13 +1,15 @@
 # Machine Learning Stack
 
-Our tech stack comprises the following components. Refer to [Setup Guides](#)
-for details on how to correctly configure some of them.
+Our tech stack comprises the following components.
+
+Refer to [Setup Guides](#) for details on how to correctly configure some of the
+tools and software discussed.
 
 Refer also to the [Python Stack page](#).
 
 ## Programming Languages
 
-Our standard for most machine learning and data science tasks is Python. When
+Our standard for most machine learning and data science projects is Python. When
 high performance is essential, we use C++ and for embedded systems with no
 requirement for C++ features, we use C.
 
@@ -15,21 +17,19 @@ requirement for C++ features, we use C.
 
 ### PyTorch
 
-The core deep learning framework we use is [PyTorch](https://pytorch.org/). This
-is because of its widespread adoption in the research community which allows us
-to leverage research very quickly. Read
+The primary deep learning framework that we use is
+[PyTorch](https://pytorch.org/). This is because of its widespread adoption in
+the research community which allows us to leverage research very quickly. Read
 [OpenAI's blog on why they standardised PyTorch](https://openai.com/index/openai-pytorch/).
 There may, however, be rare exceptions where you will need to use
 [TensorFlow](https://www.tensorflow.org/) or other deep learning frameworks.
 
-Refer to the
-[PyTorch website](https://docs.anaconda.com/miniconda/miniconda-install/) for
-installation details.
+Refer to the [PyTorch website](https://pytorch.org/) for installation details.
 
 ```{note}
 
 Use pip even if you are installing into a Conda environment unless you have a
-specific reason for doing otherwise. This is discussed further in
+specific reason for doing otherwise. This is discussed in detail in the
 [Conda Setup Guide](#).
 ```
 
@@ -42,23 +42,28 @@ virtual environment.
 
 ### Conda
 
-For most of our machine learning projects, use Conda because this allows for
+For most machine learning projects, use Conda because this allows for
 installation of other things such as CUDA and cuDNN within the environment which
-creates flexibility to use different versions for different projects with ease.
+creates flexibility to use different versions for different projects with
+relative ease.
 
-[Anaconda](https://www.anaconda.com/) is the most popular system by which one
-can use Conda. However, we prefer
-[Miniconda](https://docs.anaconda.com/miniconda/) which is a miniature
-installation of Anaconda distribution which only includes Conda, Python and the
-packages they depend on. As a result, Miniconda is smaller and takes up less
-storage requirements. Only use Anaconda instead of Miniconda when there is a
-specific reason to do so.
+[Miniconda](https://docs.anaconda.com/miniconda/) is our recommended means to
+use the Conda package manager. It is a miniature installation of the Anaconda
+distribution which only includes Conda, Python and the packages they depend on.
+
+[Anaconda](https://www.anaconda.com/) is a comprehensive Python and R
+distribution that includes the Conda package manager, popular data science
+libraries, and development tools like Jupyter notebooks. While it provides a
+complete environment with pre-installed packages such as NumPy, Pandas, and
+Scikit-learn, the full installation requires several gigabytes of storage space.
+Hence, unless you have a specific need for the features of Anaconda, it is
+recommended that you use Miniconda.
 
 Refer to the
 [Miniconda installation documentation](https://docs.anaconda.com/miniconda/miniconda-install/)
 for installation details.
 
-Also refer to the
+Refer also to the
 [Conda Environment section of the Python Environments setup guide](#) for
 details on how to set up your Conda environment.
 
