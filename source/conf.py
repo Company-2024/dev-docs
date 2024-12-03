@@ -26,10 +26,11 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_title = project
-html_theme = "pydata_sphinx_theme"
+html_theme = 'theme'
+html_theme_path = ["_themes"]
 html_static_path = ['_static']
 html_show_sourcelink = False
 
 # Add CSS stylesheets
-def setup(app):
-    app.add_css_file('css/styles.css') # may also be a URL
+# def setup(app):
+#     app.add_css_file('css/styles.css') # may also be a URL

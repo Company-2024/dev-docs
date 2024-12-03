@@ -13,8 +13,8 @@
 html {
   --pst-font-family-base-system: Helvetica, Arial, Segoe UI, sans-serif;
   --pst-font-size-h1: 220%;
-  --pst-font-size-h2: 165%;
-  --pst-font-size-h3: 140%;
+  --pst-font-size-h2: 170%;
+  --pst-font-size-h3: 130%;
   --pst-font-size-h4: 130%;
   --pst-font-size-h5: 120%;
   --pst-font-size-h6: 110%;
@@ -38,16 +38,28 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.5rem;
+  margin-top: 2.7rem;
   margin-bottom: 0.8rem;
 }
 
 h3 {
-  margin-top: 1.2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+
 }
 
 .bd-header {
   background-color: none;
   box-shadow: none;
   border-bottom: 1px solid var(--pst-color-border);
+}
+
+.bd-sidebar-primary {
+  width: 20.313rem;
+}
+
+@media (min-width: 960px){
+  .bd-page-width {
+    max-width: 120rem;
+  }
 }

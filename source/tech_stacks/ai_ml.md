@@ -93,8 +93,9 @@ solution for workflow management.
 
 Refer to the [DVC installation documentation](https://dvc.org/doc/install) for
 installation details. It is recommended that you install it as a system
-application rather than a Python package so that you can reuse the installation
-with ease. However, installing as a Python package is also fine.
+application rather than a Python package so that you can use the software across
+various projects as you would Git. However, installing as a Python package is
+also fine.
 
 ### MLflow
 
