@@ -20,9 +20,9 @@ Specific Topics
 .. toctree::
     :maxdepth: 1
     
-    python/index.rst
-    ai_ml/index.rst
-    dev_ops/index.rst
+    specific_topics/python/index.rst
+    specific_topics/ai_ml/index.rst
+    specific_topics/dev_ops/index.rst
    
 
 Indices and tables

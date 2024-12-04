@@ -21,14 +21,20 @@ html {
   --pst-font-size-small: 0.889rem;
   --pst-font-weight-heading: 700;
   --pst-sidebar-secondary: 18rem;
+
+  /* Colors */
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
 }
 
 html[data-theme=light] {
   --pst-color-border: #e0e0e0;
+  --pst-color-sidebar-tab-active: var(--gray-100);
 }
 
 html[data-theme=dark] {
   --pst-color-border: #404040;
+  --pst-color-sidebar-tab-active: #404040;
 }
 
 
@@ -48,18 +54,44 @@ h3 {
 
 }
 
+/* Header */
 .bd-header {
   background-color: none;
   box-shadow: none;
   border-bottom: 1px solid var(--pst-color-border);
 }
 
-.bd-sidebar-primary {
-  width: 20.313rem;
-}
-
+/* Page */
 @media (min-width: 960px){
   .bd-page-width {
     max-width: 120rem;
   }
 }
+
+/* Sidebar */
+.bd-sidebar-primary {
+  width: 20.313rem;
+}
+
+nav.bd-links ul ul {
+  /* remove extra space before sidebar tabs */
+  padding: 0;
+}
+
+nav.bd-links .current>a {
+  background-color: var(--gray-100);
+  box-shadow: none;
+  position: relative; /* Required to position the pseudo-element relative to the parent */
+}
+
+nav.bd-links .current > a::before {
+  content: ''; /* Needed for pseudo-elements */
+  position: absolute; /* Allows positioning relative to the parent */
+  left: 6px; /* Position the divider at the left */
+  top: 0; /* Start at the top of the element */
+  width: 2px; /* Width of the divider */
+  height: 100%; /* Match the height of the <a> element */
+  background-color: red; /* Divider color */
+}
+
+

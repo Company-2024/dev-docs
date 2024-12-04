@@ -18,3 +18,9 @@ Python Coding Standard
 
 .. TODO:
 .. - Local package using pip first then submodules
+
+.. toctree::
+    :maxdepth: 1
+
+    test1.rst
+    test2.rst
