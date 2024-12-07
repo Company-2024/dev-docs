@@ -21,6 +21,7 @@ html {
   --pst-font-size-small: 0.889rem;
   --pst-font-weight-heading: 700;
   --pst-sidebar-secondary: 18rem;
+  --sidebar-tabs-padding-top-bottom: 6px;
 
   /* Colors */
   --gray-100: #f3f4f6;
@@ -30,11 +31,15 @@ html {
 html[data-theme=light] {
   --pst-color-border: #e0e0e0;
   --pst-color-sidebar-tab-active: var(--gray-100);
+  --pst-color-text-sidebar: var(--pst-color-text-muted);
+  --pst-color-link-hover: var(--pst-color-info);
 }
 
 html[data-theme=dark] {
   --pst-color-border: #404040;
   --pst-color-sidebar-tab-active: #404040;
+  --pst-color-text-sidebar: var(--pst-color-text-muted);
+  --pst-color-link-hover: var(--pst-color-info);
 }
 
 
@@ -52,6 +57,10 @@ h3 {
   margin-top: 1.4rem;
   margin-bottom: 0.6rem;
 
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Header */
@@ -73,25 +82,73 @@ h3 {
   width: 20.313rem;
 }
 
+/* not sure why this initially had margin-top: auto, but it is causing undesirable scrollbar */
+.bd-sidebar-primary .sidebar-primary-items__end {
+  margin-top: 0;
+}
+
+.bd-sidebar-primary li.has-children>.reference {
+  /* place dropdown icons in sidebar tabs */
+  margin-right: 0;
+  /* override padding top which the current them sets in here as well */
+  padding-top: var(--sidebar-tabs-padding-top-bottom);
+}
+
 nav.bd-links ul ul {
   /* remove extra space before sidebar tabs */
   padding: 0;
 }
 
+nav.bd-links li>a { 
+  padding: var(--sidebar-tabs-padding-top-bottom) 14px;
+  color: var(--pst-color-text-sidebar);
+  border-radius: 6px;
+  margin-bottom: 3px;
+}
+
+/* style of selected (current) tab whose child of tab is also selected */
+nav.bd-links li.current:has(ul.current) > a {
+  color: var(--pst-color-text-sidebar);
+  background: none;
+  text-decoration: none;
+}
+
+nav.bd-links li.toctree-l2>a {
+  padding-left: 21px; /* ceil(l1 padding x 1.5) */
+}
+
+nav.bd-links li.toctree-l3>a {
+  padding-left: 32px; /* ceil(l2 padding x 1.5) */
+}
+
+/* remove styling on hovering sidebar tabs */
+/* TODO: Not sure why this was also there for the selector: nav.bd-links li>a:active, */
+nav.bd-links li>a:hover {
+  color: var(--pst-color-text-sidebar);
+  text-decoration: none;
+  background-color: var(--pst-color-sidebar-tab-active);
+}
+
+nav.bd-links li.current:has(ul.current) > a::before {
+  /* remove divider on left from tab if a child of tab is selected */
+  content: none;
+}
+
 nav.bd-links .current>a {
-  background-color: var(--gray-100);
+  position: relative; /* required to position the pseudo-element relative to the parent */
   box-shadow: none;
-  position: relative; /* Required to position the pseudo-element relative to the parent */
+  background-color: var(--pst-color-sidebar-tab-active);
+  color: var(--pst-color-text-sidebar);
 }
 
 nav.bd-links .current > a::before {
   content: ''; /* Needed for pseudo-elements */
   position: absolute; /* Allows positioning relative to the parent */
   left: 6px; /* Position the divider at the left */
-  top: 0; /* Start at the top of the element */
-  width: 2px; /* Width of the divider */
-  height: 100%; /* Match the height of the <a> element */
-  background-color: red; /* Divider color */
+  top: auto; /* Start at the top of the element */
+  bottom: auto;
+  width: 3px; /* Width of the divider */
+  height: 68%;
+  background-color: var(--pst-color-info);
+  border-radius: 20px;
 }
-
-
