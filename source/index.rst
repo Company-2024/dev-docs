@@ -25,6 +25,9 @@ Specific Topics
     specific_topics/dev_ops/index.rst
    
 
+.. TODO:
+.. - Templates page sectioned for report templates, config file, Gitignore, README templates etc.
+
 Indices and tables
 ==================
 

@@ -7,6 +7,12 @@ Python Coding Standard
 .. include:: general.md
     :parser: myst_parser.sphinx_
 
+.. include:: dependency_management.md
+    :parser: myst_parser.sphinx_
+
+.. include:: modules.md
+    :parser: myst_parser.sphinx_
+
 .. include:: docstrings.md
     :parser: myst_parser.sphinx_
 

@@ -56,11 +56,43 @@ h2 {
 h3 {
   margin-top: 1.4rem;
   margin-bottom: 0.6rem;
-
 }
 
 a {
   text-decoration: none;
+}
+
+/* also contains table title */
+.table-container {
+  text-align: center;
+}
+
+/* for giving the table a rounded border */
+.table-wrapper {
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.25rem;
+  margin-bottom: 0.8rem;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-style: hidden;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid var(--pst-color-border);
+  text-align: left;
+}
+
+th {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+thead {
+  background-color: var(--pst-color-surface);
 }
 
 /* Header */
