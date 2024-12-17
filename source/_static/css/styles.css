@@ -112,6 +112,8 @@ thead {
 /* Sidebar */
 .bd-sidebar-primary {
   width: 20.313rem;
+  padding: 2rem 0.5rem 1rem;
+
 }
 
 /* not sure why this initially had margin-top: auto, but it is causing undesirable scrollbar */
@@ -126,13 +128,18 @@ thead {
   padding-top: var(--sidebar-tabs-padding-top-bottom);
 }
 
+nav.bd-links {
+  /* margin-right set to -1rem by default which causes sidebar to overflow parent */
+  margin-right: 0;
+}
+
 nav.bd-links ul ul {
   /* remove extra space before sidebar tabs */
   padding: 0;
 }
 
 nav.bd-links li>a { 
-  padding: var(--sidebar-tabs-padding-top-bottom) 14px;
+  padding: var(--sidebar-tabs-padding-top-bottom) 16px;
   color: var(--pst-color-text-sidebar);
   border-radius: 6px;
   margin-bottom: 3px;
@@ -146,16 +153,16 @@ nav.bd-links li.current:has(ul.current) > a {
 }
 
 nav.bd-links li.toctree-l2>a {
-  padding-left: 21px; /* ceil(l1 padding x 1.5) */
+  padding-left: 23px; /* ceil(l1 padding x 1.5) */
 }
 
 nav.bd-links li.toctree-l3>a {
-  padding-left: 32px; /* ceil(l2 padding x 1.5) */
+  padding-left: 34px; /* ceil(l2 padding x 1.5) */
 }
 
 /* remove styling on hovering sidebar tabs */
 /* TODO: Not sure why this was also there for the selector: nav.bd-links li>a:active, */
-nav.bd-links li>a:hover {
+nav.bd-links li>a:hover, nav.bd-links li.current:has(ul.current) > a:hover {
   color: var(--pst-color-text-sidebar);
   text-decoration: none;
   background-color: var(--pst-color-sidebar-tab-active);
@@ -176,11 +183,22 @@ nav.bd-links .current>a {
 nav.bd-links .current > a::before {
   content: ''; /* Needed for pseudo-elements */
   position: absolute; /* Allows positioning relative to the parent */
-  left: 6px; /* Position the divider at the left */
+  left: 7px; /* Position the divider at the left */
   top: auto; /* Start at the top of the element */
   bottom: auto;
   width: 3px; /* Width of the divider */
   height: 68%;
   background-color: var(--pst-color-info);
   border-radius: 20px;
+}
+
+/****************/
+/* Main content */
+/****************/
+.bd-main .bd-content .bd-article-container {
+  max-width: 100%;
+}
+
+.bd-main .bd-content .bd-article-container .bd-article {
+  padding: 1.5rem 2rem;
 }
