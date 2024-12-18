@@ -109,7 +109,9 @@ thead {
   }
 }
 
+/***********/
 /* Sidebar */
+/***********/
 .bd-sidebar-primary {
   width: 20.313rem;
   padding: 2rem 0.5rem 1rem;
@@ -197,6 +199,16 @@ nav.bd-links .current > a::before {
 /****************/
 .bd-main .bd-content .bd-article-container {
   max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bd-main .bd-content .bd-article-container > * {
+  max-width: 800px;
+}
+
+.bd-main .bd-content .bd-article-container .bd-header-article {
+  width: 100%;
 }
 
 .bd-main .bd-content .bd-article-container .bd-article {
