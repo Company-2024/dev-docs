@@ -82,7 +82,7 @@ Machine learning operations (MLOps) are a set of practices that help to manage
 the machine learning (ML) life cycle more efficiently. Below are the tools we
 use data management, model management, pipeline management etc.
 
-### Data Versioning Control (DVC)
+### Data Version Control (DVC)
 
 [Data Version Control (DVC)](https://dvc.org/) is an open-source version control
 system specifically designed for dataset version tracking and managing machine
@@ -96,6 +96,12 @@ installation details. It is recommended that you install it as a system
 application rather than a Python package so that you can use the software across
 various projects as you would Git. However, installing as a Python package is
 also fine.
+
+### Apache Airflow
+
+[Apache Airflow](https://airflow.apache.org/) is an open-source
+[data orchestration](#) platform that allows you to programmatically author,
+schedule and monitor workflows
 
 ### MLflow
 
